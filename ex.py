@@ -73,7 +73,9 @@ if __name__ == "__main__":
         mlflow.log_metric("rmse", rmse)
         mlflow.log_metric("r2", r2)
         mlflow.log_metric("mae", mae)
-
+         # For Dagshub
+        # remote_server = ' http'
+        # mlflow.set_tracking_uri(remote_server)
         predictions = lr.predict(train_x)
         signature = infer_signature(train_x, predictions)
 
